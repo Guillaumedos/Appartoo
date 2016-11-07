@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+	
+	<title>Modifier un Contact</title>
+	
+  </head>
+  <body>
+<h2> Cliquer sur un contact pour le modifier</h2>
+
+{% for list in listcontact %}
+	
+		<a href="{{ path('contact_edit', {'id':list.id}) }}">{{ list.Nom }} - {{ list.Prenom }} Modifier</a>
+		<a href="{{ path('contact_delete', {'id':list.id}) }}"> Supprimer </a>
+{% endfor %}
+
+ </body>
+ </html>
